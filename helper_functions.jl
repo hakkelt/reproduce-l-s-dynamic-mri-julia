@@ -143,3 +143,42 @@ function getEnufft_original(sense_maps::Array{Complex{Float64},3};
     
     E, out_basistransform
 end
+
+
+function fftshift!(
+        output::AbstractArray,
+        input::AbstractArray,
+        dims::NTuple{N,Int}) where {N}
+    
+    @assert input !== output "input and output must be two distinct arrays"
+    @assert any(dims .> 0) "dims can contain only positive values!"
+    @assert any(dims .<= ndims(input)) "dims cannot contain larger value than ndims(input) (=$(ndims(input)))"
+    @assert size(output) == size(input) "input and output must have the same size"
+    @assert eltype(output) == eltype(input) "input and output must have the same eltype"
+    
+    shifts = [dim in dims ? size(input, dim) ÷ 2 : 0 for dim in 1:ndims(input)]
+    circshift!(output, input, shifts)
+    
+end
+
+function ifftshift!(
+        output::AbstractArray,
+        input::AbstractArray,
+        dims::NTuple{N,Int}) where {N}
+    
+    @assert input !== output "input and output must be two distinct arrays"
+    @assert any(dims .> 0) "dims can contain only positive values!"
+    @assert any(dims .<= ndims(input)) "dims cannot contain larger value than ndims(input) (=$(ndims(input)))"
+    @assert size(output) == size(input) "input and output must have the same size"
+    @assert eltype(output) == eltype(input) "input and output must have the same eltype"
+    
+    shifts = [dim in dims ? size(input, dim) ÷ 2 + size(input, dim) % 2 : 0 for dim in 1:ndims(input)]
+    circshift!(output, input, shifts)
+    
+end
+
+fftshift!(output::AbstractArray, input::AbstractArray, dims::Int) =
+    fftshift!(output, input, (dims,))
+
+ifftshift!(output::AbstractArray, input::AbstractArray, dims::Int) =
+    ifftshift!(output, input, (dims,))
