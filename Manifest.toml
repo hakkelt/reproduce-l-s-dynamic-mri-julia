@@ -141,9 +141,9 @@ version = "1.0.0"
 
 [[DSP]]
 deps = ["FFTW", "IterTools", "LinearAlgebra", "Polynomials", "Random", "Reexport", "SpecialFunctions", "Statistics"]
-git-tree-sha1 = "302ad2e27750367ccd17515810d322fa3d42d9f8"
+git-tree-sha1 = "6f55a056cbe5b8cae9d71e28535394d45747fd3f"
 uuid = "717857b8-e6f2-59f4-9121-6e50c889abd2"
-version = "0.6.5"
+version = "0.6.6"
 
 [[DataAPI]]
 git-tree-sha1 = "00612b2fbe534a539dc7f70106c71e3a943d9b98"
@@ -204,9 +204,9 @@ version = "0.3.1"
 
 [[FFTW]]
 deps = ["AbstractFFTs", "FFTW_jll", "IntelOpenMP_jll", "Libdl", "LinearAlgebra", "MKL_jll", "Reexport"]
-git-tree-sha1 = "109d82fa4b00429f9afcce873e9f746f11f018d3"
+git-tree-sha1 = "b6a74f6dfd9e9d16b765397dc90df03e5a00532e"
 uuid = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
-version = "1.2.0"
+version = "1.2.1"
 
 [[FFTW_jll]]
 deps = ["Libdl", "Pkg"]
@@ -239,9 +239,9 @@ version = "1.0.5+2"
 
 [[FunctionOperators]]
 deps = ["LaTeXStrings", "LinearAlgebra", "MacroTools", "Parameters", "Printf"]
-git-tree-sha1 = "00731c63954ed9ece8fb636fd0b2866332823902"
+git-tree-sha1 = "d0dff4455010b6a4c2b0cb0386a32cd98e6d0121"
 uuid = "98ce4118-165c-488a-9b71-2bb5aff4e594"
-version = "0.2.1"
+version = "0.2.2"
 
 [[GR]]
 deps = ["Base64", "DelimitedFiles", "LinearAlgebra", "Printf", "Random", "Serialization", "Sockets", "Test", "UUIDs"]
@@ -659,9 +659,9 @@ version = "0.8.0"
 
 [[StaticArrays]]
 deps = ["LinearAlgebra", "Random", "Statistics"]
-git-tree-sha1 = "5a3bcb6233adabde68ebc97be66e95dcb787424c"
+git-tree-sha1 = "4118cba3529e99af61aea9a83f7bfd3cff5ffb28"
 uuid = "90137ffa-7385-5640-81b9-e52037218182"
-version = "0.12.1"
+version = "0.12.2"
 
 [[Statistics]]
 deps = ["LinearAlgebra", "SparseArrays"]
