@@ -239,9 +239,9 @@ version = "1.0.5+2"
 
 [[FunctionOperators]]
 deps = ["LaTeXStrings", "LinearAlgebra", "MacroTools", "Parameters", "Printf"]
-git-tree-sha1 = "d0dff4455010b6a4c2b0cb0386a32cd98e6d0121"
+path = "../FunctionOperators"
 uuid = "98ce4118-165c-488a-9b71-2bb5aff4e594"
-version = "0.2.2"
+version = "0.2.1"
 
 [[GR]]
 deps = ["Base64", "DelimitedFiles", "LinearAlgebra", "Printf", "Random", "Serialization", "Sockets", "Test", "UUIDs"]
